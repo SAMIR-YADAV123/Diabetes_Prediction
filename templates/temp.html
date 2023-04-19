@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetese</title>
+    <style>
+        body{
+            background: linear-gradient(to right, rgb(21, 220, 224) , rgb(236, 188, 111));
+        }
+
+  
+
+         .head{
+            font-size: 45px;
+            font-weight: bold;
+            margin-top:40px;
+            color: rgb(194, 47, 28);
+            text-align: center;
+            margin-top: 30px;
+            background-color: black;
+
+         }
+
+        .form-container{
+            max-width: 700px;
+            margin: 10px auto;
+            padding: 30px;
+            border: 1px solid black;
+            margin-top: 40px;
+        }
+     
+       input{
+        height: 40px;
+        width:100%;
+        /* border-radius: 10px; */
+        background-color: rgba(255, 255, 255, 0.927);
+       } 
+
+       .infields{
+        border: 1px solid black;
+        padding: 20px;
+        margin: 20px auto;
+       }
+    p{
+        font-size: 25px;
+    }
+
+
+    .btn{
+        width: 100%;
+        height: 50px;
+    }
+
+    </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- <div class="head"> -->
+        <p class="head">Diabetes Risk Prediction</p>
+        <!-- <h1>Prediction</h1> -->
+    <!-- </div>  -->
+   
+      <div class="form-container">
+       
+
+        <form action="{{ url_for('predict')}}"method="post">
+            <div class=" infields border border-dark p-3 mb-3"> 
+              <p>Age:</p>  
+              <input class="form-input" type="text" name="age" placeholder="eg 20"><br>
+            </div>
+            <div class=" infields border border-dark p-3 mb-3"> 
+                <p>Gender:</p>
+                <input class="form-input" type="text" name="gender" placeholder="eg 1 for male , 0 for female"><br>
+            </div>
+            <div class=" infields border border-dark p-3 mb-3">    
+                <p>Polyuria:</p>
+                <input class="form-input" type="text" name="polyuria" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Plydipsia:</p>
+                <input class="form-input" type="text" name="polydipsia" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Sudden Weight Loss:</p>
+                <input class="form-input" type="text" name="suddenloss" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Weakness:</p>
+                <input class="form-input" type="text" name="weakness" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Polyphagia:</p>
+                <input class="form-input" type="text" name="polyphagia" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Genital Thrush:</p>
+                <input class="form-input" type="text" name="genital" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Visual blurring:</p>
+                <input class="form-input" type="text" name="visual" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Itching:</p>
+                <input class="form-input" type="text" name="itching" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Irritability:</p>
+                <input class="form-input" type="text" name="irritability" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Delayed healing:</p>
+                <input class="form-input" type="text" name="delayed" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Partial paresis:</p>
+                <input class="form-input" type="text" name="partial" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Muscle stiffness:</p>
+                <input class="form-input" type="text" name="muscle" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Alopecia:</p>
+                <input class="form-input" type="text" name="alopecia" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+            <div class="infields border border-dark p-3 mb-3"> 
+                <p>Obesity:</p>
+                <input class="form-input" type="text" name="obesity" placeholder="eg 1 for yes, 0 for No"><br>
+            </div>
+          
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+
+      </div>
+</body>
+</html>
